@@ -15,17 +15,11 @@ using namespace std;
 
 struct Page
 {
-    uint32_t address;
-    bool used;
-
-    Page()
-    {
-        address = 0;
-        used = false;
-    }
+    uint32_t address = 0;
+    bool used = false;
 
     Page *next;
-    bool first; // used so when printing the output, we will always start from here
+    bool first = false; // used so when printing the output, we will always start from here
 };
 
 Page* addEntryToPageTable(uint32_t address, Page *page);
@@ -104,9 +98,6 @@ Page* makePageTable()
     Page *fourthEntry = new Page;
 
     firstEntry->first = true;
-    secondEntry->first = false;
-    thirdEntry->first = false;
-    fourthEntry->first = false;
 
     firstEntry->next = secondEntry;
     secondEntry->next = thirdEntry;
