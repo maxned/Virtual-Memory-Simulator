@@ -1,0 +1,13 @@
+
+This is almost a virtual memory simulator.
+
+Only relevant information for the virtual memory is that there can only be 4 pages in RAM at at time.
+Each page is 1KB in size and the virtual address space is 4GB which results in a 32 bit size address.
+The program uses a clock replacement algorithm for the pages in the page table. 
+
+The output are the pages' address of the first byte that are currently present in the page table in RAM.
+
+Provide either vmtest-1000-6.txt, vmtest-1000-7.txt, or vmtest-1000-8.txt in the argument when running the program. Then compare with the results in vm-out-1000-6.txt, vm-out-1000-7.txt, or vm-out-1000-8.txt
+The output file of the program will always be vm-out.txt
+
+If running the program in Xcode, all you need to do is copy the vmtest-1000-*.txt into the compiled product folder in Finder. The argument for running the program is already set in the scheme for vmtest-1000-6.txt, but you need to choose the correct input file.
